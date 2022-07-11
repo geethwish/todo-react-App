@@ -1,0 +1,11 @@
+@import "../../Assets/styles/variables.scss";
+
+.button {
+  width: 100%;
+  padding: 1.5rem;
+  border: none;
+  background-color: $primary;
+  color: $light;
+  font-size: 2rem;
+  font-weight: 600;
+}

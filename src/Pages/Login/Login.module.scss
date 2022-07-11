@@ -1,0 +1,25 @@
+@import "../../Assets/styles/variables.scss";
+
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 7rem;
+  font-weight: 800;
+  color: $primary;
+  margin-bottom: 2.5rem;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  width: 42rem;
+}

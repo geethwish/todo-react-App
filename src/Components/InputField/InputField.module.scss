@@ -1,0 +1,35 @@
+@import "../../Assets/styles/variables.scss";
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  background-color: $light1;
+  height: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  background-color: $light1;
+  border: none;
+  font-size: 1.4rem;
+}
+.input:focus {
+  border: none !important;
+}
+
+.input:active {
+  border: none !important;
+}
+.input:focus-visible {
+  border: none !important;
+  outline-offset: unset;
+  outline: none;
+}
+
+.label {
+  font-size: 2rem;
+  font-weight: 600;
+}
