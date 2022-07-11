@@ -7,8 +7,6 @@ interface ButtonsProps {
     name: string,
     type?: "button" | "submit",
     onClick?: React.MouseEventHandler<HTMLButtonElement>
-
-
 }
 const Button = (props: ButtonsProps) => {
 

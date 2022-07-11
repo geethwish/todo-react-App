@@ -1,0 +1,36 @@
+@import "../../Assets/styles/variables.scss";
+
+.navigationContainer {
+  display: flex;
+  padding: 1.5rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoSection {
+  font-size: 4rem;
+  font-weight: 800;
+  color: $primary;
+}
+.icon path {
+  fill: $primaryLight;
+}
+.inactiveIcon path {
+  fill: $light2;
+}
+
+.actionSection {
+  display: flex;
+}
+
+.mr1 {
+  margin-right: 1rem;
+}
+
+.mr2 {
+  margin-right: 2rem;
+}
+
+.navigationBackground {
+  background-color: $light1;
+}

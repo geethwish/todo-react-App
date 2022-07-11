@@ -1,4 +1,9 @@
 @import "../../Assets/styles/variables.scss";
+
+.border {
+  border: 1px solid $warning !important;
+}
+
 .formGroup {
   display: flex;
   flex-direction: column;
@@ -32,4 +37,10 @@
 .label {
   font-size: 2rem;
   font-weight: 600;
+}
+
+.error {
+  color: $warning;
+  font-weight: bold;
+  font-size: 1.2rem;
 }

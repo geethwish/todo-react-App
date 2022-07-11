@@ -15,7 +15,7 @@ const Login = (props: any) => {
         <div className={styles.loginContainer}>
 
             <div className={styles.title}>
-                Todo
+                Todos
             </div>
 
             <div className={styles.wrapper}>

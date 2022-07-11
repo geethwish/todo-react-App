@@ -1,0 +1,19 @@
+@import "../../Assets/styles/variables.scss";
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+.active {
+  color: $primary;
+}

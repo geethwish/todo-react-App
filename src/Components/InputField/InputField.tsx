@@ -8,12 +8,13 @@ interface InputFieldProps {
     id?: string,
     placeholder?: string,
     type?: React.HTMLInputTypeAttribute,
-    onChange?: React.EventHandler<React.ChangeEvent>
+    onChange?: React.EventHandler<React.ChangeEvent>,
+    errorMessage?: string
 }
 const InputField = (props: InputFieldProps) => {
-    const { label, name, id, type, onChange, placeholder } = props
+    const { label, name, id, type, onChange, placeholder, errorMessage } = props
     return (
-        <div className={classnames(styles.formGroup)}>
+        <div className={classnames(styles.formGroup, errorMessage ? styles.border : '')}>
             <label
                 htmlFor={name || id}
                 className={styles.label}
@@ -27,6 +28,12 @@ const InputField = (props: InputFieldProps) => {
                 placeholder={type === "password" ? "******" : placeholder}
                 className={styles.input}
             />
+            {
+                errorMessage && <span className={styles.error}>
+                    *{errorMessage}
+                </span>
+            }
+
         </div>
     )
 }

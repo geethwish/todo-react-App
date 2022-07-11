@@ -1,0 +1,11 @@
+@import "../../Assets/styles/variables.scss";
+.container {
+  padding: 0 42rem;
+  max-width: 670rem;
+}
+
+@media (max-width: $sm) {
+  .container {
+    padding: 2rem;
+  }
+}

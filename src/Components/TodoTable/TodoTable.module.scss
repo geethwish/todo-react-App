@@ -1,0 +1,31 @@
+@import "../../Assets/styles/variables.scss";
+.table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.table tr:nth-child(even) {
+  background-color: $light1;
+}
+
+.table tr:hover {
+  background-color: $light3;
+  cursor: pointer;
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: $primaryLight;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.tableContainer {
+  width: 100%;
+  margin-top: 5rem;
+}
