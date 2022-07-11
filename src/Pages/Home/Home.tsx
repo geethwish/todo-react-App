@@ -1,4 +1,3 @@
-import React from 'react'
 import Container from '../../Components/Container/Container'
 import Loader from '../../Components/Loader/Loader'
 import NavigationBar from '../../Components/NavigationBar/NavigationBar'
@@ -14,10 +13,15 @@ const Home = (props: any) => {
     return (
         <>
             <NavigationBar />
+
             <Container>
+
                 <TodoTable columns={columns} />
+
                 <Loader />
+
             </Container>
+
         </>
 
     )

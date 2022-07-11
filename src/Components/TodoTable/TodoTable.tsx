@@ -5,10 +5,13 @@ interface TodoTablePros {
 }
 const TodoTable = (props: TodoTablePros) => {
 
-    const { columns } = props
+    const { columns } = props;
+
     return (
         <div className={styles.tableContainer}>
+
             <table className={styles.table}>
+
                 <tr>
                     {columns && columns.length > 0 &&
                         columns.map((column, index) => (
@@ -17,6 +20,7 @@ const TodoTable = (props: TodoTablePros) => {
                     }
 
                 </tr>
+
                 <tr>
                     <td>Alfreds Futterkiste</td>
                     <td>Maria Anders</td>
