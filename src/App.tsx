@@ -24,11 +24,11 @@ function App() {
 
     }, [])
 
-    if (userDetails && userDetails.user && userDetails.user.verify) {
+    if (userDetails && userDetails.user && !userDetails.user.verify && window.location.pathname === "/") {
 
-        <Navigate to="/" />
+        return <Navigate to="/login" />
+
     }
-
     return (
         <Routes>
 
