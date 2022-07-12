@@ -1,16 +1,27 @@
 import classNames from "classnames"
 import { useEffect, useState } from "react"
+import { useDispatch } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
+// components
 import LogoutIcon from "../../Assets/icons/LogoutIcon"
 import TodoIcon from "../../Assets/icons/Todo"
+import { logout } from "../../Redux/Auth/authSlice"
 import Container from "../Container/Container"
 import IconButton from "../IconButton/IconButton"
+
+// styles
 import styles from './NavigationBar.module.scss'
+
 const NavigationBar = () => {
+
+    let navigate = useNavigate();
+
+    const dispatch = useDispatch()
 
     const path: any = window.location.pathname;
 
-    const [activeRoute, setActiveRoute] = useState('')
+    const [activeRoute, setActiveRoute] = useState('');
 
     useEffect(() => {
 
@@ -28,7 +39,16 @@ const NavigationBar = () => {
 
     const handleNavigation = (id: string) => {
 
-        console.log(id);
+        if (id === "todo") {
+
+        } else if (id === "logout") {
+
+            dispatch(logout())
+
+            navigate('/login')
+
+        }
+
 
     }
 

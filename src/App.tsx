@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import {
     Routes,
     Route,
+    Navigate
 } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "./app/hooks";
 
@@ -14,7 +15,7 @@ function App() {
 
     const dispatch = useAppDispatch();
 
-    const userDetails = useAppSelector(user);
+    const userDetails: any = useAppSelector(user);
 
     // check for logged user
     useEffect(() => {
@@ -23,11 +24,15 @@ function App() {
 
     }, [])
 
+    if (userDetails && userDetails.user && userDetails.user.verify) {
+
+        <Navigate to="/" />
+    }
 
     return (
         <Routes>
 
-            <Route path="/" element={Object.keys(userDetails.user).length > 0 ? <Home /> : <Login />} />
+            <Route path="/" element={<Home />} />
 
             <Route path="/login" element={<Login />} />
 

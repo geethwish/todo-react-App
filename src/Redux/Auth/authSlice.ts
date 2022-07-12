@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState, } from '../../app/store';
 import { getLoginDetails } from '../../Services/login';
 
@@ -26,7 +26,7 @@ export const login = createAsyncThunk(
 
         if (response && response.username === 'admin' && response.password === 'admin') {
 
-            const userDetails = { username: "Admin", userId: 1 };
+            const userDetails = { username: "Admin", userId: 1, verify: true };
 
             localStorage.setItem('user', JSON.stringify(userDetails))
 
@@ -56,7 +56,14 @@ export const authSlice = createSlice({
             const userDetails = JSON.parse(localStorage.getItem("user") || '{}')
             state.status = 'idle';
             state.user = userDetails;
+        },
+        logout: (state) => {
+            localStorage.clear();
+            state.status = 'idle';
+            state.user = {};
+
         }
+
     },
     extraReducers: (builder) => {
         builder
@@ -74,7 +81,7 @@ export const authSlice = createSlice({
     },
 });
 
-export const { reset, getUser } = authSlice.actions;
+export const { reset, getUser, logout } = authSlice.actions;
 
 export const user = (state: RootState) => state.auth;
 

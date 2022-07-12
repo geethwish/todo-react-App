@@ -28,4 +28,121 @@ table th {
 .tableContainer {
   width: 100%;
   margin-top: 5rem;
+  margin-bottom: 5rem;
+  box-sizing: border-box;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 2rem;
+  width: 100%;
+}
+.pages {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.page {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.page:hover {
+  background-color: $success;
+  color: $light;
+}
+
+.active {
+  background-color: $success;
+  color: $light;
+}
+
+.btn {
+  background-color: $light;
+  border: 1px solid $success !important;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn:hover {
+  background-color: $success;
+}
+.btnIcon {
+  height: 24px;
+  width: 24px;
+  stroke: $info;
+}
+.btnIcon:hover {
+  stroke: $light;
+}
+
+.paginatorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContainer {
+  min-width: 50rem;
+  min-height: 20rem;
+}
+
+.modalFooter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.modalTitle {
+  font-size: 5em;
+  color: $dark3;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+.icon {
+  font-size: 15rem;
+  color: $success;
+}
+
+.iconPending {
+  font-size: 15rem;
+  color: $warning;
+}
+
+.badge {
+  background-color: $info;
+  padding: 0.2rem 0;
+  min-width: 0.8rem;
+  border-radius: 20rem;
+  text-align: center;
+}
+
+.done {
+  background-color: $info;
+}
+.pending {
+  background-color: $alt;
 }
